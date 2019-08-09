@@ -21,6 +21,7 @@
 #include <linux/can.h>
 #include <linux/can/bcm.h>
 #include <linux/can/error.h>
+#include <linux/sockios.h>
 
 #define RXLEN 128
 
@@ -28,7 +29,7 @@ int sc = -1;
 fd_set readfds;
 struct timeval tv;
 
-inline void state_bcm() {
+void state_bcm() {
 	int i, ret;
 	struct sockaddr_can caddr;
 	socklen_t caddrlen = sizeof(caddr);
