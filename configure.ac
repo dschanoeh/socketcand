@@ -6,6 +6,9 @@ AC_INIT([socketcand], [0.4.2], [https://github.com/dschanoeh/socketcand/issues])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_SRCDIR([state_bcm.c])
 
+# This is deprecated code: Added the following line to point to new repository location
+AC_FATAL("This repository is deprecated. New location is https://github.com/linux-can/socketcand")
+
 CFLAGS="${CFLAGS} -Wall -Wno-parentheses -DPF_CAN=29 -DAF_CAN=PF_CAN"
 
 # Enable debug mode option
